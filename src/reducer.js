@@ -16,7 +16,7 @@ const _get = key => {
 	return val && JSON.parse(val);
 }
 
-console.log('taking a break');
+console.log('taking a break - here');
 
 export default function(state = init, action) {
 

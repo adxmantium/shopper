@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f6aaba1aab592a470afa"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f4e1b59a5e35f020ea15"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -67049,7 +67049,7 @@ var _get = function _get(key) {
     return val && JSON.parse(val);
 };
 
-console.log('taking a break');
+console.log('taking a break - here');
 
 var _default = function _default() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : init;
