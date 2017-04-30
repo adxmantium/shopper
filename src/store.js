@@ -6,14 +6,14 @@ import promise from 'redux-promise-middleware'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 
 // Reducers
-import shopperReducer from './reducer.js'
+import shopper from './reducer.js'
 
 //create and combine middleware
 const middleware = applyMiddleware(thunk, promise(), logger());
 
 //combine all reducers
 const reducers = combineReducers({
-	shopperReducer,
+	shopper,
 });
 
 // Create Store

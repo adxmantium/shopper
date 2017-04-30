@@ -7,13 +7,16 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
 //store
 import store from './store.js'
+import Apply from './apply.js'
 import LandingPage from './landing.js'
 
 render((
 
 	<Provider store={ store }>
 		<Router history={ hashHistory }>
-			<Route path="/" component={ LandingPage } />
+			<Route path="/" component={ LandingPage }>
+				<Route path="/apply" component={ Apply } />
+			</Route>
 	    </Router>
     </Provider>
 

@@ -1,6 +1,7 @@
 // landing.js
 
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 import './styles.scss'
 
@@ -12,14 +13,17 @@ export default class LandingPage extends Component{
 	}
 
 	render(){
+		let { children } = this.props;
+
+		console.log('prosp: ', this.props);
 		return(
 			<div id="_landing">
 
 				<h1>Become an Instacart Shopper!</h1>
 
-				<div className="apply">
-					Apply Now >
-				</div>
+				{ children ? 
+					children : <Link to="/apply" className="apply">Apply Now ></Link>
+				}
 
 			</div>
 		);
