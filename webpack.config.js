@@ -4,8 +4,9 @@ var visualizer = require('webpack-visualizer-plugin');
 var DashboardPlugin = require('webpack-dashboard/plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+console.log(path.resolve(__dirname, 'public'));
+
 module.exports = {
-    // entry: "./src/index.js",
     entry: [
         'react-hot-loader/patch',
         // activate HMR for React

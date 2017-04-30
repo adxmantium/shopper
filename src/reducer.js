@@ -3,7 +3,9 @@
 import _ from 'lodash'
 import { FIELDS } from './constants'
 
-let init = {};
+let init = {
+	users: [],
+};
 
 export default function(state = init, action) {
 

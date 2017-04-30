@@ -33,8 +33,6 @@ class Apply extends Component{
 			else hashHistory.push('agreement');
 
 		}else this.setState({attempted: true});
-
-		// console.log('taking break');
 	}
 
 	render(){
