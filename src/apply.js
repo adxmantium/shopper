@@ -8,11 +8,11 @@ import { updateForm } from './actions.js'
 import './styles.scss'
 
 const fields = [
-	{name: 'fname', placeholder: 'First Name'},
-	{name: 'lname', placeholder: 'Last Name'},
-	{name: 'email', placeholder: 'Email Address'},
-	{name: 'phone', placeholder: 'Phone Number'},
-	{name: 'zip', placeholder: 'Zip Code'},
+	{name: 'fname', placeholder: 'First Name', type: 'text'},
+	{name: 'lname', placeholder: 'Last Name', type: 'text'},
+	{name: 'email', placeholder: 'Email Address', type: 'email'},
+	{name: 'phone', placeholder: 'Phone Number', type: 'tel'},
+	{name: 'zip', placeholder: 'Zip Code', type: 'text'},
 ];
 
 class Apply extends Component{
@@ -40,14 +40,41 @@ class Field extends Component{
 	}
 
 	_update(e){
-		let { dispatch } = this.props,
-			name = e.target.getAttribute('name');
+		let name = e.target.getAttribute('name'),
+			val = e.target.value;
 
-		dispatch( updateForm({[name]: e.target.value}) );
+		this._validate(name, val);		
 	}
 
-	_validate(e){
-		console.log('here');
+	_validate(name, val){
+		let { dispatch } = this.props,
+			valid = false;
+
+		switch(name){
+
+			case 'fname':
+			case 'lname':
+				if( /^[A-Za-z -]+$/.test(val) ) valid = true;
+				break;
+
+			case 'email':
+				if( /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(val) ) valid = true;
+				break;
+
+			case 'phone':
+				if( /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(val) ) valid = true;
+				break;
+
+			case 'zip':
+				if( /^[a-zA-Z0-9\.,\- ]+$/.test(val) ) valid = true;
+				break;
+
+		}
+
+		dispatch( updateForm({
+			[name]: val,
+			[name+'_valid']: valid,
+		}) );
 	}
 
 	render(){
@@ -58,10 +85,11 @@ class Field extends Component{
 				id={field.name}
 				type={field.type}
 				name={field.name}
+				className={!shopper[field.name+'_valid'] ? 'err' : ''}
 				value={shopper[field.name] || ''}
 				placeholder={field.placeholder}
 				onChange={this._update}
-				onFocus={this._validate} />
+				onFocus={this._update} />
 		);
 	}
 }
