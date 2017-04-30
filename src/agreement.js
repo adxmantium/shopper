@@ -16,7 +16,7 @@ class Agreement extends Component{
 
 	_saveShopper(){
 		let { dispatch } = this.props;
-		
+
 		dispatch( saveShopper() );
 		hashHistory.push('/confirmation');
 	}
@@ -25,7 +25,9 @@ class Agreement extends Component{
 		return(
 			<div className="container agreement">
 				<h4>Terms of Service</h4>
+				
 				{ AGREEMENT.map(a => <div key={a.id}>{a.label}</div>) }
+
 				<div className="agree" onClick={ this._saveShopper }>I Agree</div>
 				<Link to="/" className="disagree">I Disagree</Link>
 			</div>

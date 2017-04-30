@@ -10,6 +10,17 @@ export const updateForm = updates => {
 export const saveShopper = () => {
 	return {
 		type: 'SHOPPER:SAVE',
-		payload: {}
+		payload: {
+			save_done: true,
+		}
+	}
+}
+
+export const logout = () => {
+	return {
+		type: 'SHOPPER:LOGOUT',
+		payload: {
+			save_done: false,
+		}
 	}
 }

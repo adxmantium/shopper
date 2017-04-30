@@ -107,13 +107,16 @@ body{
 		&:active{ @include activeBtn(); }
 	}
 
-	.disagree{
+	.disagree, .logout{
 		display: block;
 		text-align: center;
 		color: $blue;
 		text-decoration: none;
 		font-size: 14px;
+		cursor: pointer;
 	}
+
+	.logout{ margin: 10px 0 0; }
 
 	form#_apply{
 		max-width: 365px;
@@ -175,6 +178,12 @@ body{
 	    	font-size: 14px;
 	    	margin: 40px 0 0 30px;
 	    	@include fadeInLeft(0.5s);
+	    }
+
+	    .updated{
+	    	color: $green;
+	    	text-align: center;
+	    	margin: 10px 0 0;
 	    }
 	}
 }

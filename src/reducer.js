@@ -27,7 +27,7 @@ export default function(state = init, action) {
     		return newState;
 
     	case 'SHOPPER:SAVE':
-    		var newState = {...state, save_done: true},
+    		var newState = {...state, ...action.payload},
     			newUser = {};
 
     		_.each(FIELDS, f => newUser[f.name] = newState[f.name] );
@@ -38,7 +38,7 @@ export default function(state = init, action) {
     		return newState;
 
     	case 'SHOPPER:LOGOUT':
-    		var newState = {...state, save_done: false};
+    		var newState = {...state, ...action.payload};
 
     		_.each(FIELDS, f => newState[f.name] = '' );
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import React, { Component } from 'react'
 import { hashHistory } from 'react-router'
 
+import Logout from './logout'
 import { FIELDS } from './constants'
 import { updateForm } from './actions'
 
@@ -14,6 +15,7 @@ class Apply extends Component{
 		super(props);
 
 		this.state = {
+			updated: false,
 			attempted: false,
 		};
 
@@ -23,20 +25,28 @@ class Apply extends Component{
 	_apply(e){
 		e.preventDefault();
 
-		let { shopper } = this.props;
+		let { shopper } = this.props,
+			activeUserSet = !!_.get(shopper, 'activeUser', false) && !_.isEmpty(shopper.activeUser);
 
-		if( shopper.form_valid ) hashHistory.push('agreement');
-		else this.setState({attempted: true});
+		if( shopper.form_valid ){
+			if( activeUserSet ) this.setState({updated: true});
+			else hashHistory.push('agreement');
+
+		}else this.setState({attempted: true});
 	}
 
 	render(){
 		let { shopper } = this.props,
-			{ attempted } = this.state,
-			invalid = attempted && (!shopper.form_valid && _.isBoolean(shopper.form_valid));
+			{ attempted, updated } = this.state,
+			invalid = attempted && (!shopper.form_valid && _.isBoolean(shopper.form_valid)),
+			activeUserSet = !!_.get(shopper, 'activeUser', false) && !_.isEmpty(shopper.activeUser);
 
 		return(
 			<form id="_apply" onSubmit={ this._apply } className="container">
-				<h5>We need some information before moving on...</h5>
+				{ activeUserSet ? 
+					<h5>Update your information</h5>
+					: <h5>We need some information before moving on...</h5>
+				}
 
 				{ FIELDS.map(f => <Field key={f.name} field={f} {...this.props} />) }	
 
@@ -44,7 +54,13 @@ class Apply extends Component{
 
 				<button 
 					disabled={ invalid }
-					className="submit">Submit</button>
+					className="submit">
+						{ activeUserSet ? 'Update' : 'Submit' }
+				</button>
+
+				{ activeUserSet && <Logout /> }
+
+				{ (activeUserSet && updated) && <div className="updated">Successfully updated!</div> }
 			</form>
 		);
 	}
