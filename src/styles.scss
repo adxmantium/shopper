@@ -1,9 +1,23 @@
 // styles.scss
 $lightgray: #eee;
-$black: #202020;
-$darkblue: #345;
 $blue: #41d1db;
+$orange: rgb(247, 167, 0);
+$white: #fff;
 $fontfam: 'Open Sans', sans-serif;
+
+@mixin b_rad($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin noUserSelect(){
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
 body{
 	background-color: $lightgray;
@@ -15,4 +29,18 @@ body{
 
 #_landing{
 	h1{ text-align: center; }
+
+	.apply{
+		width: 200px;
+		padding: 10px 0;
+		margin: auto;
+		text-align: center;
+		color: $white;
+		background-color: $orange;
+		cursor: pointer;
+		@include b_rad(3px);
+		@include noUserSelect();
+
+		&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2); }
+	}
 }
