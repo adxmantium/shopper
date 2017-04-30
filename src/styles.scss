@@ -21,6 +21,22 @@ $green: #77dd77;
 	user-select: none;
 }
 
+@mixin fadeInLeft($time){
+	animation: _fadeInRight $time;
+
+	@keyframes _fadeInRight {
+		0% {
+			opacity: 0;
+			transform: translate3d(100%, 0, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}	
+}
+
 body{
 	background-color: $lightgray;
 	border: thin solid blue;
@@ -84,10 +100,29 @@ body{
 	    	padding: 15px 0;
 	    	text-align: center;
 	    	cursor: pointer;
+	    	display: block;
+	    	font-size: 18px;
+	    	border-style: none;
+	    	outline-color: $green;
 	    	@include b_rad(3px);
 	    	@include noUserSelect();
 
 			&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2); }
+			&:disabled{ opacity: 0.7; }
+	    }
+
+	    .field-err{
+	    	color: $err;
+	    	margin: -15px 0 15px 30px;
+	    	font-size: 14px;
+	    	@include fadeInLeft(0.5s);
+	    }
+
+	    .err-msg{
+	    	color: $err;
+	    	font-size: 14px;
+	    	margin: 40px 0 0 30px;
+	    	@include fadeInLeft(0.5s);
 	    }
 	}
 }

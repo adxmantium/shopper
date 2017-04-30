@@ -8,25 +8,54 @@ import { updateForm } from './actions.js'
 import './styles.scss'
 
 const fields = [
-	{name: 'fname', placeholder: 'First Name', type: 'text'},
-	{name: 'lname', placeholder: 'Last Name', type: 'text'},
-	{name: 'email', placeholder: 'Email Address', type: 'email'},
-	{name: 'phone', placeholder: 'Phone Number', type: 'tel'},
-	{name: 'zip', placeholder: 'Zip Code', type: 'text'},
+	{name: 'fname', placeholder: 'First Name', type: 'text', err: 'Invalid first name. Ex: John'},
+	{name: 'lname', placeholder: 'Last Name', type: 'text', err: 'Invalid first name. Ex: Doe'},
+	{name: 'email', placeholder: 'Email Address', type: 'email', err: 'Invalid email. Ex: someone@example.com'},
+	{name: 'phone', placeholder: 'Phone Number', type: 'tel', err: 'Invalid phone number. Ex: 123-123-1234'},
+	{name: 'zip', placeholder: 'Zip Code', type: 'text', err: 'Invalid zip code. Ex: 12345'},
 ];
 
 class Apply extends Component{
 	constructor(props){
 		super(props);
-		this.state = {};
+		this.state = {valid: false};
+		this._apply = this._apply.bind(this);
+	}
+
+	_apply(e){
+		e.preventDefault();
+
+		let { dispatch, shopper } = this.props,
+			all_valid = false;
+
+		_.each(fields, f => {
+			if( !shopper[f.name+'_valid'] ){
+				all_valid = false;
+				return false;
+			}
+
+			all_valid = true;
+		});
+
+		dispatch( updateForm({form_valid: all_valid}) );
 	}
 
 	render(){
+		let { shopper } = this.props,
+			{ valid } = this.state,
+			invalid = (!shopper.form_valid && _.isBoolean(shopper.form_valid));
+
 		return(
-			<form id="_apply">
+			<form id="_apply" onSubmit={ this._apply }>
 				<h5>We need some information before moving on...</h5>
+
 				{ fields.map(f => <Field key={f.name} field={f} {...this.props} />) }	
-				<div className="submit">Submit</div>
+
+				{ invalid && <div className="err-msg">One or more fields are incomplete or invalid.</div> }
+
+				<button 
+					disabled={ invalid }
+					className="submit">Submit</button>
 			</form>
 		);
 	}
@@ -81,15 +110,21 @@ class Field extends Component{
 		let { shopper, field } = this.props;
 
 		return (
-			<input
-				id={field.name}
-				type={field.type}
-				name={field.name}
-				className={!shopper[field.name+'_valid'] ? 'err' : ''}
-				value={shopper[field.name] || ''}
-				placeholder={field.placeholder}
-				onChange={this._update}
-				onFocus={this._update} />
+			<div>
+				<input
+					id={field.name}
+					type={field.type}
+					name={field.name}
+					className={!shopper[field.name+'_valid'] ? 'err' : ''}
+					value={shopper[field.name] || ''}
+					placeholder={field.placeholder}
+					onChange={this._update}
+					onFocus={this._update} />
+
+				{ (!shopper[field.name+'_valid'] && 
+				   _.isBoolean(shopper[field.name+'_valid'])) && 
+						<div className="field-err">{field.err}</div> }
+			</div>
 		);
 	}
 }
