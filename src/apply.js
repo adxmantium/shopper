@@ -27,7 +27,7 @@ class Apply extends Component{
 		if( shopper.form_valid ) console.log('valid!');
 		else this.setState({attempted: true});
 
-		// dispatch( updateForm({form_valid: all_valid}) );
+		dispatch( updateForm({form_valid: all_valid}) );
 	}
 
 	render(){
