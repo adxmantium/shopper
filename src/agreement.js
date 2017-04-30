@@ -15,7 +15,7 @@ export default class Agreement extends Component{
 
 	_saveShopper(){
 		let { dispatch } = this.props;
-		// dispatch( saveShopper() );
+		dispatch( saveShopper() );
 		hashHistory.push('/confirmation');
 	}
 

@@ -26,6 +26,19 @@ export default function(state = init, action) {
 
     		return newState;
 
+    	case 'SHOPPER:SAVE':
+    		var newState = {...state, save_done: true},
+    			newUser = {};
+
+    		_.each(FIELDS, f => {
+    			newUser[f.name] = newState[f.name];
+    		});
+
+    		//save to sessionStorage
+    		newState.activeUser = newUser;
+
+    		return newState;
+
         default:
             return state;
             

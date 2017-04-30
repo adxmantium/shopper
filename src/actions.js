@@ -6,3 +6,10 @@ export const updateForm = updates => {
 		payload: updates
 	}
 }
+
+export const saveShopper = () => {
+	return {
+		type: 'SHOPPER:SAVE',
+		payload: {}
+	}
+}

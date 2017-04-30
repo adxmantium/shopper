@@ -66,6 +66,7 @@ body{
 		color: $white;
 		background-color: $orange;
 		cursor: pointer;
+		text-decoration: none;
 		@include b_rad(3px);
 		@include noUserSelect();
 
@@ -80,12 +81,18 @@ body{
 		padding: 20px;
 		@include b_rad(3px);
 
-		> div:not(:last-child){
-			margin: 0 0 20px;
-		}	
+		> div{ margin: 0 0 20px; }
+	}
+
+	.confirmation{
+		h3{
+			color: $green;
+			text-align: center;
+		}
 	}
 
 	.agree{
+		display: block;
 		color: $white;
 		background-color: $green;
 		@include b_rad(3px);
@@ -93,6 +100,8 @@ body{
 		padding: 10px 0;
 		font-size: 24px;
 		cursor: pointer;
+		text-decoration: none;
+		margin: 0 0 20px;
 		@include noUserSelect();
 
 		&:active{ @include activeBtn(); }
