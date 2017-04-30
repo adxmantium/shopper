@@ -18,7 +18,7 @@ export default class LandingPage extends Component{
 			<div id="_landing">
 
 				{ children || 
-					<div>
+					<div className="container">
 						<h1>Become an Instacart Shopper!</h1>
 						<Link to="/apply" className="apply">Apply Now ></Link>
 					</div>

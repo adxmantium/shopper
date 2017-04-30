@@ -48,6 +48,10 @@ body{
 #_landing{
 	h1{ text-align: center; }
 
+	.container{
+		@include fadeInLeft(0.5s);
+	}
+
 	.apply{
 		display: block;
 		width: 200px;

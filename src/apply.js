@@ -36,7 +36,7 @@ class Apply extends Component{
 			invalid = attempted && (!shopper.form_valid && _.isBoolean(shopper.form_valid));
 
 		return(
-			<form id="_apply" onSubmit={ this._apply }>
+			<form id="_apply" onSubmit={ this._apply } className="container">
 				<h5>We need some information before moving on...</h5>
 
 				{ FIELDS.map(f => <Field key={f.name} field={f} {...this.props} />) }	
@@ -85,7 +85,7 @@ class Field extends Component{
 				break;
 
 			case 'zip':
-				if( /^[a-zA-Z0-9\.,\- ]+$/.test(val) ) valid = true;
+				if( /^[0-9\- ]+$/.test(val) ) valid = true;
 				break;
 
 		}
