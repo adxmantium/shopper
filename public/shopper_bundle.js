@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "708f191649e5f0acf4ee"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f6aaba1aab592a470afa"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -67029,14 +67029,27 @@ var _temp = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__("./src/constants.js");
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 // reducer.js
 
 
 
 
 var init = {
-    users: []
+    users: _get('users') || []
 };
+
+var _save = function _save(key, val) {
+    localStorage.setItem(key, JSON.stringify(val));
+};
+
+var _get = function _get(key) {
+    var val = localStorage.getItem(key);
+    return val && JSON.parse(val);
+};
+
+console.log('taking a break');
 
 var _default = function _default() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : init;
@@ -67070,8 +67083,10 @@ var _default = function _default() {
                 return newUser[f.name] = newState[f.name];
             });
 
-            //save to sessionStorage
             newState.activeUser = newUser;
+
+            //save to localStorage
+            _save('users', [].concat(_toConsumableArray(newState.users), [newUser]));
 
             return newState;
 
@@ -67101,6 +67116,10 @@ var _temp = function () {
     }
 
     __REACT_HOT_LOADER__.register(init, 'init', '/Users/atom/._dev/shoppr/src/reducer.js');
+
+    __REACT_HOT_LOADER__.register(_save, '_save', '/Users/atom/._dev/shoppr/src/reducer.js');
+
+    __REACT_HOT_LOADER__.register(_get, '_get', '/Users/atom/._dev/shoppr/src/reducer.js');
 
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/atom/._dev/shoppr/src/reducer.js');
 }();

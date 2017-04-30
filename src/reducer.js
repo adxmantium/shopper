@@ -4,8 +4,17 @@ import _ from 'lodash'
 import { FIELDS } from './constants'
 
 let init = {
-	users: [],
+	users: _get('users') || [],
 };
+
+const _save = (key, val) => {
+	localStorage.setItem(key, JSON.stringify(val));
+}
+
+const _get = key => {
+	var val = localStorage.getItem(key);
+	return val && JSON.parse(val);
+}
 
 console.log('taking a break');
 
@@ -36,8 +45,10 @@ export default function(state = init, action) {
 
     		_.each(FIELDS, f => newUser[f.name] = newState[f.name] );
 
-    		//save to sessionStorage
     		newState.activeUser = newUser;
+
+    		//save to localStorage
+    		_save('users', [...newState.users, newUser]);
 
     		return newState;
 
