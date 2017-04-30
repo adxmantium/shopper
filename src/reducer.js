@@ -7,6 +7,8 @@ let init = {
 	users: [],
 };
 
+console.log('taking a break');
+
 export default function(state = init, action) {
 
     switch(action.type) {
