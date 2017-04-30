@@ -3,53 +3,43 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { updateForm } from './actions.js'
+import { updateForm } from './actions'
+import { FIELDS } from './constants'
 
 import './styles.scss'
-
-const fields = [
-	{name: 'fname', placeholder: 'First Name', type: 'text', err: 'Invalid first name. Ex: John'},
-	{name: 'lname', placeholder: 'Last Name', type: 'text', err: 'Invalid first name. Ex: Doe'},
-	{name: 'email', placeholder: 'Email Address', type: 'email', err: 'Invalid email. Ex: someone@example.com'},
-	{name: 'phone', placeholder: 'Phone Number', type: 'tel', err: 'Invalid phone number. Ex: 123-123-1234'},
-	{name: 'zip', placeholder: 'Zip Code', type: 'text', err: 'Invalid zip code. Ex: 12345'},
-];
 
 class Apply extends Component{
 	constructor(props){
 		super(props);
-		this.state = {valid: false};
+
+		this.state = {
+			attempted: false,
+		};
+
 		this._apply = this._apply.bind(this);
 	}
 
 	_apply(e){
 		e.preventDefault();
 
-		let { dispatch, shopper } = this.props,
-			all_valid = false;
+		let { dispatch, shopper } = this.props;
 
-		_.each(fields, f => {
-			if( !shopper[f.name+'_valid'] ){
-				all_valid = false;
-				return false;
-			}
+		if( shopper.form_valid ) console.log('valid!');
+		else this.setState({attempted: true});
 
-			all_valid = true;
-		});
-
-		dispatch( updateForm({form_valid: all_valid}) );
+		// dispatch( updateForm({form_valid: all_valid}) );
 	}
 
 	render(){
 		let { shopper } = this.props,
-			{ valid } = this.state,
-			invalid = (!shopper.form_valid && _.isBoolean(shopper.form_valid));
+			{ attempted } = this.state,
+			invalid = attempted && (!shopper.form_valid && _.isBoolean(shopper.form_valid));
 
 		return(
 			<form id="_apply" onSubmit={ this._apply }>
 				<h5>We need some information before moving on...</h5>
 
-				{ fields.map(f => <Field key={f.name} field={f} {...this.props} />) }	
+				{ FIELDS.map(f => <Field key={f.name} field={f} {...this.props} />) }	
 
 				{ invalid && <div className="err-msg">One or more fields are incomplete or invalid.</div> }
 
