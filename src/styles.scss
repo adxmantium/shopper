@@ -1,0 +1,18 @@
+// styles.scss
+$lightgray: #eee;
+$black: #202020;
+$darkblue: #345;
+$blue: #41d1db;
+$fontfam: 'Open Sans', sans-serif;
+
+body{
+	background-color: $lightgray;
+	border: thin solid blue;
+	font-family: $fontfam;
+	padding: 0;
+	margin: 0;
+}
+
+#_landing{
+	h1{ text-align: center; }
+}

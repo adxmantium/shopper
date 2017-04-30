@@ -1,0 +1,50 @@
+{
+  "name": "shopper",
+  "description": "instacart challenge",
+  "version": "1.0.0",
+  "author": {
+    "name": "Adam Adams"
+  },
+  "scripts": {
+    "dev": "webpack-dashboard -- webpack-dev-server",
+    "prod": "webpack -p"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "jest": "^19.0.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.6.1",
+    "redux": "^3.5.2",
+    "redux-logger": "^2.6.1",
+    "redux-promise-middleware": "^3.3.2",
+    "redux-thunk": "^2.1.0",
+    "webpack": "^2.3.2",
+    "webpack-dashboard": "^0.3.0",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.28.0",
+    "image-webpack-loader": "^3.3.0",
+    "img-loader": "^1.3.1",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.0.0",
+    "postcss-loader": "^1.3.3",
+    "react": "^15.0.2",
+    "react-document-title": "^2.0.2",
+    "react-dom": "^15.0.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack-visualizer-plugin": "^0.1.5"
+  }
+}
