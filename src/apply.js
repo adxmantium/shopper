@@ -46,7 +46,7 @@ class Field extends Component{
 	}
 
 	_validate(e){
-
+		console.log('here');
 	}
 
 	render(){
