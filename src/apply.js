@@ -7,7 +7,7 @@ import { Link, hashHistory } from 'react-router'
 import Field from './field'
 import Logout from './logout'
 import { FIELDS } from './constants'
-import { updateForm } from './actions'
+import { updateForm, updateUser } from './actions'
 
 class Apply extends Component{
 	constructor(props){
@@ -24,12 +24,15 @@ class Apply extends Component{
 	_apply(e){
 		e.preventDefault();
 
-		let { shopper } = this.props,
+		let { dispatch, shopper } = this.props,
 			activeUserSet = !!_.get(shopper, 'activeUser', false) && !_.isEmpty(shopper.activeUser);
 
 		if( shopper.form_valid ){
-			if( activeUserSet ) this.setState({updated: true});
-			else hashHistory.push('agreement');
+			if( activeUserSet ){
+				this.state.updated = true;
+				dispatch( updateUser() );
+
+			}else hashHistory.push('agreement');
 
 		}else this.setState({attempted: true});
 	}

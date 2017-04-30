@@ -17,6 +17,13 @@ class Login extends Component{
 		this._login = this._login.bind(this);
 	}
 
+	componentWillReceiveProps(np){
+		let { shopper: s } = this.props,
+			{ shopper: ns} = np;
+
+		if( ns.login_success ) hashHistory.push('/apply');
+	}
+
 	_login(e){
 		e.preventDefault();
 

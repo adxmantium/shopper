@@ -20,7 +20,7 @@ export default function(state = init, action) {
 
     switch(action.type) {
 
-    	case 'SHOPPER:UPDATE':
+    	case 'SHOPPER:UPDATE_FORM':
     		var newState = {...state, ...action.payload},
     			all_valid = false;
 
@@ -44,17 +44,40 @@ export default function(state = init, action) {
 
     		_.each(FIELDS, f => newUser[f.name] = newState[f.name] );
 
+    		newUser.id = newState.users.length + 1;
+
     		newState.activeUser = newUser;
 
     		//save to localStorage
     		_save('users', [...newState.users, newUser]);
+    		newState.users = _get('users');
+
+    		return newState;
+
+    	case 'SHOPPER:UPDATE_USER':
+    		var newState = {...state},
+    			updateUser = {};
+
+    		_.each(FIELDS, f => updateUser[f.name] = newState[f.name] );
+
+    		// take updated info and find current user in users list and update that users info
+    		newState.users = newState.users.map(u => {
+    			if( u.id === newState.activeUser.id ) return {...u, ...updateUser};
+    			return u;
+    		});
+
+    		//save to localStorage
+    		_save('users', [...newState.users]);
 
     		return newState;
 
     	case 'SHOPPER:LOGOUT':
     		var newState = {...state, ...action.payload};
 
-    		_.each(FIELDS, f => newState[f.name] = '' );
+    		_.each(FIELDS, f => {
+    			newState[f.name] = '';
+    			newState[f.name+'_valid'] = null;
+    		});
 
     		newState.activeUser = {};
 
@@ -71,6 +94,9 @@ export default function(state = init, action) {
     		if( found ){
     			newState.activeUser = {...found};
     			newState.login_failed = false;
+    			newState.login_success = true;
+
+				_.each(FIELDS, f => newState[f.name] = found[f.name] );
 
     		}else newState.login_failed = !found; 
 

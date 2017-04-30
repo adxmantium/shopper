@@ -2,8 +2,15 @@
 
 export const updateForm = updates => {
 	return {
-		type: 'SHOPPER:UPDATE',
+		type: 'SHOPPER:UPDATE_FORM',
 		payload: updates
+	}
+}
+
+export const updateUser = () => {
+	return {
+		type: 'SHOPPER:UPDATE_USER',
+		payload: {}
 	}
 }
 
