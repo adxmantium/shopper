@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f4e1b59a5e35f020ea15"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b44f500623a9ef186395"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -698,7 +698,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -65688,7 +65688,7 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./node_modules/webpack-dev-server/client/index.js?http:/localhost:8080":
+/***/ "./node_modules/webpack-dev-server/client/index.js?http:/localhost:8080/public":
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__resourceQuery) {/* global __resourceQuery */
@@ -65876,7 +65876,7 @@ function reloadApp() {
 	}
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?http://localhost:8080"))
+/* WEBPACK VAR INJECTION */}.call(exports, "?http://localhost:8080/public"))
 
 /***/ }),
 
@@ -67036,10 +67036,6 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 
 
-var init = {
-    users: _get('users') || []
-};
-
 var _save = function _save(key, val) {
     localStorage.setItem(key, JSON.stringify(val));
 };
@@ -67049,7 +67045,10 @@ var _get = function _get(key) {
     return val && JSON.parse(val);
 };
 
-console.log('taking a break - here');
+var init = {
+    users: _get('users') || []
+};
+console.log('here8');
 
 var _default = function _default() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : init;
@@ -67115,11 +67114,11 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(init, 'init', '/Users/atom/._dev/shoppr/src/reducer.js');
-
     __REACT_HOT_LOADER__.register(_save, '_save', '/Users/atom/._dev/shoppr/src/reducer.js');
 
     __REACT_HOT_LOADER__.register(_get, '_get', '/Users/atom/._dev/shoppr/src/reducer.js');
+
+    __REACT_HOT_LOADER__.register(init, 'init', '/Users/atom/._dev/shoppr/src/reducer.js');
 
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/atom/._dev/shoppr/src/reducer.js');
 }();
@@ -67214,7 +67213,7 @@ if(true) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("./node_modules/react-hot-loader/patch.js");
-__webpack_require__("./node_modules/webpack-dev-server/client/index.js?http:/localhost:8080");
+__webpack_require__("./node_modules/webpack-dev-server/client/index.js?http:/localhost:8080/public");
 __webpack_require__("./node_modules/webpack/hot/only-dev-server.js");
 module.exports = __webpack_require__("./src/index.js");
 

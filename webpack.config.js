@@ -9,7 +9,7 @@ module.exports = {
         'react-hot-loader/patch',
         // activate HMR for React
 
-        'webpack-dev-server/client?http://localhost:8080',
+        'webpack-dev-server/client?http://localhost:8080/public',
         // bundle the client for webpack-dev-server
         // and connect to the provided endpoint
 
@@ -22,8 +22,10 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'public'),
+        publicPath: '/',
         filename: "shopper_bundle.js",
-        sourceMapFilename: "shopper_bundle.map"
+        sourceMapFilename: "shopper_bundle.map",
+        chunkFilename: '[name].js'
     },
 
     devtool: '#source-map', 
@@ -55,7 +57,7 @@ module.exports = {
     },
 
     devServer: {
-        contentBase: path.resolve(__dirname), // tells server where to serve content from
+        contentBase: path.resolve(__dirname, 'public'), // tells server where to serve content from
         compress: true, // enables gzip compression
         port: 8080, // customize port number
         stats: 'errors-only', // only shows error to console

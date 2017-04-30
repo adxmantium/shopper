@@ -3,10 +3,6 @@
 import _ from 'lodash'
 import { FIELDS } from './constants'
 
-let init = {
-	users: _get('users') || [],
-};
-
 const _save = (key, val) => {
 	localStorage.setItem(key, JSON.stringify(val));
 }
@@ -16,7 +12,10 @@ const _get = key => {
 	return val && JSON.parse(val);
 }
 
-console.log('taking a break - here');
+let init = {
+	users: _get('users') || [],
+};
+console.log('here8');
 
 export default function(state = init, action) {
 
