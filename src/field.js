@@ -11,6 +11,15 @@ export default class Field extends Component{
 		this._validate = this._validate.bind(this);
 	}
 
+	componentWillMount(){
+		let { shopper, field } = this.props;
+
+		// if activeUser is set and not empty and has logged in, then validate fields on init
+		if( shopper.activeUser && !_.isEmpty(shopper.activeUser) && shopper.login_success ){
+			this._validate(field.name, shopper[field.name]);
+		}
+	}
+
 	_update(e){
 		let name = e.target.getAttribute('name'),
 			val = e.target.value;

@@ -95,8 +95,7 @@ export default function(state = init, action) {
     			newState.activeUser = {...found};
     			newState.login_failed = false;
     			newState.login_success = true;
-
-				_.each(FIELDS, f => newState[f.name] = found[f.name] );
+    			newState = {...newState, ...found};
 
     		}else newState.login_failed = !found; 
 

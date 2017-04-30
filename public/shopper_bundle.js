@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7c554e7fa7f024645a2e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "968dbfb9d6ab1cdec080"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -66255,6 +66255,7 @@ if(true) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return updateForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return updateUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return saveShopper; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return login; });
@@ -66262,8 +66263,15 @@ if(true) {
 
 var updateForm = function updateForm(updates) {
 	return {
-		type: 'SHOPPER:UPDATE',
+		type: 'SHOPPER:UPDATE_FORM',
 		payload: updates
+	};
+};
+
+var updateUser = function updateUser() {
+	return {
+		type: 'SHOPPER:UPDATE_USER',
+		payload: {}
 	};
 };
 
@@ -66299,6 +66307,8 @@ var _temp = function () {
 	}
 
 	__REACT_HOT_LOADER__.register(updateForm, 'updateForm', '/Users/atom/._dev/shoppr/src/actions.js');
+
+	__REACT_HOT_LOADER__.register(updateUser, 'updateUser', '/Users/atom/._dev/shoppr/src/actions.js');
 
 	__REACT_HOT_LOADER__.register(saveShopper, 'saveShopper', '/Users/atom/._dev/shoppr/src/actions.js');
 
@@ -66481,12 +66491,17 @@ var Apply = function (_Component) {
 		value: function _apply(e) {
 			e.preventDefault();
 
-			var shopper = this.props.shopper,
+			var _props = this.props,
+			    dispatch = _props.dispatch,
+			    shopper = _props.shopper,
 			    activeUserSet = !!_.get(shopper, 'activeUser', false) && !_.isEmpty(shopper.activeUser);
 
 
 			if (shopper.form_valid) {
-				if (activeUserSet) this.setState({ updated: true });else __WEBPACK_IMPORTED_MODULE_2_react_router__["hashHistory"].push('agreement');
+				if (activeUserSet) {
+					this.state.updated = true;
+					dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__actions__["e" /* updateUser */])());
+				} else __WEBPACK_IMPORTED_MODULE_2_react_router__["hashHistory"].push('agreement');
 			} else this.setState({ attempted: true });
 		}
 	}, {
@@ -66744,6 +66759,19 @@ var Field = function (_Component) {
 	}
 
 	_createClass(Field, [{
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			var _props = this.props,
+			    shopper = _props.shopper,
+			    field = _props.field;
+
+			// if activeUser is set and not empty and has logged in, then validate fields on init
+
+			if (shopper.activeUser && !_.isEmpty(shopper.activeUser) && shopper.login_success) {
+				this._validate(field.name, shopper[field.name]);
+			}
+		}
+	}, {
 		key: '_update',
 		value: function _update(e) {
 			var name = e.target.getAttribute('name'),
@@ -66786,9 +66814,9 @@ var Field = function (_Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			var _props = this.props,
-			    shopper = _props.shopper,
-			    field = _props.field;
+			var _props2 = this.props,
+			    shopper = _props2.shopper,
+			    field = _props2.field;
 
 
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -67031,6 +67059,15 @@ var Login = function (_Component) {
 	}
 
 	_createClass(Login, [{
+		key: 'componentWillReceiveProps',
+		value: function componentWillReceiveProps(np) {
+			var s = this.props.shopper,
+			    ns = np.shopper;
+
+
+			if (ns.login_success) __WEBPACK_IMPORTED_MODULE_2_react_router__["hashHistory"].push('/apply');
+		}
+	}, {
 		key: '_login',
 		value: function _login(e) {
 			e.preventDefault();
@@ -67243,7 +67280,7 @@ var _default = function _default() {
 
     switch (action.type) {
 
-        case 'SHOPPER:UPDATE':
+        case 'SHOPPER:UPDATE_FORM':
             var newState = _extends({}, state, action.payload),
                 all_valid = false;
 
@@ -67269,10 +67306,32 @@ var _default = function _default() {
                 return newUser[f.name] = newState[f.name];
             });
 
+            newUser.id = newState.users.length + 1;
+
             newState.activeUser = newUser;
 
             //save to localStorage
             _save('users', [].concat(_toConsumableArray(newState.users), [newUser]));
+            newState.users = _get('users');
+
+            return newState;
+
+        case 'SHOPPER:UPDATE_USER':
+            var newState = _extends({}, state),
+                updateUser = {};
+
+            __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.each(__WEBPACK_IMPORTED_MODULE_1__constants__["b" /* FIELDS */], function (f) {
+                return updateUser[f.name] = newState[f.name];
+            });
+
+            // take updated info and find current user in users list and update that users info
+            newState.users = newState.users.map(function (u) {
+                if (u.id === newState.activeUser.id) return _extends({}, u, updateUser);
+                return u;
+            });
+
+            //save to localStorage
+            _save('users', [].concat(_toConsumableArray(newState.users)));
 
             return newState;
 
@@ -67280,7 +67339,8 @@ var _default = function _default() {
             var newState = _extends({}, state, action.payload);
 
             __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.each(__WEBPACK_IMPORTED_MODULE_1__constants__["b" /* FIELDS */], function (f) {
-                return newState[f.name] = '';
+                newState[f.name] = '';
+                newState[f.name + '_valid'] = null;
             });
 
             newState.activeUser = {};
@@ -67298,6 +67358,8 @@ var _default = function _default() {
             if (found) {
                 newState.activeUser = _extends({}, found);
                 newState.login_failed = false;
+                newState.login_success = true;
+                newState = _extends({}, newState, found);
             } else newState.login_failed = !found;
 
             return newState;
