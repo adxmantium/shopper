@@ -1,9 +1,11 @@
 // styles.scss
 $lightgray: #eee;
 $blue: #41d1db;
+$err: firebrick;
 $orange: rgb(247, 167, 0);
 $white: #fff;
 $fontfam: 'Open Sans', sans-serif;
+$green: #77dd77;
 
 @mixin b_rad($radius) {
   -webkit-border-radius: $radius;
@@ -43,5 +45,49 @@ body{
 		@include noUserSelect();
 
 		&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2); }
+	}
+
+	form#_apply{
+		max-width: 365px;
+	    margin: auto;
+	    border-radius: 3px;
+	    padding: 20px 20px 50px;
+	    background: #fff;
+	    box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.3);
+
+	    h5{ text-align: center; }
+
+	    input{
+	    	border-width: 1px;
+		    border-style: solid;
+		    border-color: #aaa;
+		    width: 80%;
+		    display: block;
+		    margin: 0 auto 15px;
+		    font-size: 18px;
+		    @include b_rad(3px);
+		    padding: 15px 5px;
+		    color: #797979;
+		    outline-color: $green;
+		    outline-width: 4px;
+
+		    &.err{ outline-color: $err; }
+
+		    &::placeholder{ color: #ddd; }
+	    }
+
+	    .submit{
+	    	width: 83.5%;
+	    	margin: auto;
+	    	background-color: $green;
+	    	color: $white;
+	    	padding: 15px 0;
+	    	text-align: center;
+	    	cursor: pointer;
+	    	@include b_rad(3px);
+	    	@include noUserSelect();
+
+			&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2); }
+	    }
 	}
 }

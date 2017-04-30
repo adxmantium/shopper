@@ -24,6 +24,7 @@ class Apply extends Component{
 	render(){
 		return(
 			<form id="_apply">
+				<h5>We need some information before moving on...</h5>
 				{ fields.map(f => <Field key={f.name} field={f} {...this.props} />) }	
 				<div className="submit">Submit</div>
 			</form>
@@ -58,8 +59,9 @@ class Field extends Component{
 				type={field.type}
 				name={field.name}
 				value={shopper[field.name] || ''}
-				onChange={ this._update }
-				onFocus={ this._validate } />
+				placeholder={field.placeholder}
+				onChange={this._update}
+				onFocus={this._validate} />
 		);
 	}
 }
