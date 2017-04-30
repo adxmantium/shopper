@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "968dbfb9d6ab1cdec080"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "93245f5b94a1e9c1c2e5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -67061,6 +67061,8 @@ var Login = function (_Component) {
 	_createClass(Login, [{
 		key: 'componentWillReceiveProps',
 		value: function componentWillReceiveProps(np) {
+			console.log('taking break');
+
 			var s = this.props.shopper,
 			    ns = np.shopper;
 
