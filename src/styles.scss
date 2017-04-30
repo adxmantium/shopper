@@ -1,6 +1,6 @@
 // styles.scss
 $lightgray: #eee;
-$blue: #41d1db;
+$blue: #779ecb;
 $err: firebrick;
 $orange: rgb(247, 167, 0);
 $white: #fff;
@@ -37,15 +37,20 @@ $green: #77dd77;
 	}	
 }
 
+@mixin activeBtn(){
+	box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
 body{
 	background-color: $lightgray;
-	border: thin solid blue;
 	font-family: $fontfam;
 	padding: 0;
 	margin: 0;
 }
 
 #_landing{
+	padding: 40px 0 0;
+
 	h1{ text-align: center; }
 
 	.container{
@@ -65,6 +70,40 @@ body{
 		@include noUserSelect();
 
 		&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2); }
+	}
+
+	.agreement, .confirmation{
+		background-color: $white;
+		max-width: 500px;
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+		margin: auto;
+		padding: 20px;
+		@include b_rad(3px);
+
+		> div:not(:last-child){
+			margin: 0 0 20px;
+		}	
+	}
+
+	.agree{
+		color: $white;
+		background-color: $green;
+		@include b_rad(3px);
+		text-align: center;
+		padding: 10px 0;
+		font-size: 24px;
+		cursor: pointer;
+		@include noUserSelect();
+
+		&:active{ @include activeBtn(); }
+	}
+
+	.disagree{
+		display: block;
+		text-align: center;
+		color: $blue;
+		text-decoration: none;
+		font-size: 14px;
 	}
 
 	form#_apply{
@@ -111,7 +150,7 @@ body{
 	    	@include b_rad(3px);
 	    	@include noUserSelect();
 
-			&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2); }
+			&:active{ @include activeBtn(); }
 			&:disabled{ opacity: 0.7; }
 	    }
 

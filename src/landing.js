@@ -14,6 +14,7 @@ export default class LandingPage extends Component{
 	render(){
 		let { children } = this.props;
 
+		console.log(this.props);
 		return(
 			<div id="_landing">
 

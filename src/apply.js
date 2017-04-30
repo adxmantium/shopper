@@ -1,10 +1,11 @@
 // apply.js
 
-import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import React, { Component } from 'react'
+import { hashHistory } from 'react-router'
 
-import { updateForm } from './actions'
 import { FIELDS } from './constants'
+import { updateForm } from './actions'
 
 import './styles.scss'
 
@@ -22,12 +23,10 @@ class Apply extends Component{
 	_apply(e){
 		e.preventDefault();
 
-		let { dispatch, shopper } = this.props;
+		let { shopper } = this.props;
 
-		if( shopper.form_valid ) console.log('valid!');
+		if( shopper.form_valid ) hashHistory.push('agreement');
 		else this.setState({attempted: true});
-
-		dispatch( updateForm({form_valid: all_valid}) );
 	}
 
 	render(){

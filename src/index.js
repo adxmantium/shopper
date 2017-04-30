@@ -9,6 +9,8 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import store from './store.js'
 import Apply from './apply.js'
 import LandingPage from './landing.js'
+import Agreement from './agreement.js'
+import Confirmation from './confirmation.js'
 
 render((
 
@@ -16,6 +18,8 @@ render((
 		<Router history={ hashHistory }>
 			<Route path="/" component={ LandingPage }>
 				<Route path="/apply" component={ Apply } />
+				<Route path="/agreement" component={ Agreement } />
+				<Route path="/confirmation" component={ Confirmation } />
 			</Route>
 	    </Router>
     </Provider>
