@@ -8,6 +8,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 //store
 import store from './store.js'
 import Apply from './apply.js'
+import Login from './login.js'
 import LandingPage from './landing.js'
 import Agreement from './agreement.js'
 import Confirmation from './confirmation.js'
@@ -18,6 +19,7 @@ render((
 		<Router history={ hashHistory }>
 			<Route path="/" component={ LandingPage }>
 				<Route path="/apply" component={ Apply } />
+				<Route path="/login" component={ Login } />
 				<Route path="/agreement" component={ Agreement } />
 				<Route path="/confirmation" component={ Confirmation } />
 			</Route>

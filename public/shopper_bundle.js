@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b44f500623a9ef186395"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7c554e7fa7f024645a2e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -2845,7 +2845,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #eee;\n  font-family: \"Open Sans\", sans-serif;\n  padding: 0;\n  margin: 0; }\n\n#_landing {\n  padding: 40px 0 0; }\n  #_landing h1 {\n    text-align: center; }\n  #_landing .container {\n    animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n  #_landing .apply {\n    display: block;\n    width: 200px;\n    padding: 10px 0;\n    margin: auto;\n    text-align: center;\n    color: #fff;\n    background-color: #f7a700;\n    cursor: pointer;\n    text-decoration: none;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .apply:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .agreement, #_landing .confirmation {\n    background-color: #fff;\n    max-width: 500px;\n    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);\n    margin: auto;\n    padding: 20px;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px; }\n    #_landing .agreement > div, #_landing .confirmation > div {\n      margin: 0 0 20px; }\n  #_landing .confirmation h3 {\n    color: #77dd77;\n    text-align: center; }\n  #_landing .agree {\n    display: block;\n    color: #fff;\n    background-color: #77dd77;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    text-align: center;\n    padding: 10px 0;\n    font-size: 24px;\n    cursor: pointer;\n    text-decoration: none;\n    margin: 0 0 20px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .agree:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .disagree, #_landing .logout {\n    display: block;\n    text-align: center;\n    color: #779ecb;\n    text-decoration: none;\n    font-size: 14px;\n    cursor: pointer; }\n  #_landing .logout {\n    margin: 10px 0 0; }\n  #_landing form#_apply {\n    max-width: 365px;\n    margin: auto;\n    border-radius: 3px;\n    padding: 20px 20px 50px;\n    background: #fff;\n    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3); }\n    #_landing form#_apply h5 {\n      text-align: center; }\n    #_landing form#_apply input {\n      border-width: 1px;\n      border-style: solid;\n      border-color: #aaa;\n      width: 80%;\n      display: block;\n      margin: 0 auto 15px;\n      font-size: 18px;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      padding: 15px 5px;\n      color: #797979;\n      outline-color: #77dd77;\n      outline-width: 4px; }\n      #_landing form#_apply input.err {\n        outline-color: firebrick; }\n      #_landing form#_apply input::placeholder {\n        color: #ddd; }\n    #_landing form#_apply .submit {\n      width: 83.5%;\n      margin: auto;\n      background-color: #77dd77;\n      color: #fff;\n      padding: 15px 0;\n      text-align: center;\n      cursor: pointer;\n      display: block;\n      font-size: 18px;\n      border-style: none;\n      outline-color: #77dd77;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      -webkit-user-select: none;\n      -moz-user-select: none;\n      -ms-user-select: none;\n      user-select: none; }\n      #_landing form#_apply .submit:active {\n        box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n      #_landing form#_apply .submit:disabled {\n        opacity: 0.7; }\n    #_landing form#_apply .field-err {\n      color: firebrick;\n      margin: -15px 0 15px 30px;\n      font-size: 14px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form#_apply .err-msg {\n      color: firebrick;\n      font-size: 14px;\n      margin: 40px 0 0 30px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form#_apply .updated {\n      color: #77dd77;\n      text-align: center;\n      margin: 10px 0 0; }\n", ""]);
+exports.push([module.i, "body {\n  background-color: #eee;\n  font-family: \"Open Sans\", sans-serif;\n  padding: 0;\n  margin: 0; }\n\n#_landing {\n  padding: 40px 0 0; }\n  #_landing h1 {\n    text-align: center; }\n  #_landing .container {\n    animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n  #_landing .apply {\n    display: block;\n    width: 200px;\n    padding: 10px 0;\n    margin: auto;\n    text-align: center;\n    color: #fff;\n    background-color: #f7a700;\n    cursor: pointer;\n    text-decoration: none;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .apply:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .agreement, #_landing .confirmation {\n    background-color: #fff;\n    max-width: 500px;\n    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);\n    margin: auto;\n    padding: 20px;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px; }\n    #_landing .agreement > div, #_landing .confirmation > div {\n      margin: 0 0 20px; }\n  #_landing .confirmation h3 {\n    color: #77dd77;\n    text-align: center; }\n  #_landing .agree {\n    display: block;\n    color: #fff;\n    background-color: #77dd77;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    text-align: center;\n    padding: 10px 0;\n    font-size: 24px;\n    cursor: pointer;\n    text-decoration: none;\n    margin: 0 0 20px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .agree:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .disagree, #_landing .logout {\n    display: block;\n    text-align: center;\n    color: #779ecb;\n    text-decoration: none;\n    font-size: 14px;\n    cursor: pointer; }\n  #_landing .logout {\n    margin: 10px 0 0; }\n  #_landing form {\n    max-width: 365px;\n    margin: auto;\n    border-radius: 3px;\n    padding: 20px 20px 50px;\n    background: #fff;\n    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3); }\n    #_landing form h5 {\n      text-align: center; }\n    #_landing form input {\n      border-width: 1px;\n      border-style: solid;\n      border-color: #aaa;\n      width: 80%;\n      display: block;\n      margin: 0 auto 15px;\n      font-size: 18px;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      padding: 15px 5px;\n      color: #797979;\n      outline-color: #77dd77;\n      outline-width: 4px; }\n      #_landing form input.err {\n        outline-color: firebrick; }\n      #_landing form input::placeholder {\n        color: #ddd; }\n    #_landing form .submit {\n      width: 83.5%;\n      margin: auto;\n      background-color: #77dd77;\n      color: #fff;\n      padding: 15px 0;\n      text-align: center;\n      cursor: pointer;\n      display: block;\n      font-size: 18px;\n      border-style: none;\n      outline-color: #77dd77;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      -webkit-user-select: none;\n      -moz-user-select: none;\n      -ms-user-select: none;\n      user-select: none; }\n      #_landing form .submit:active {\n        box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n      #_landing form .submit:disabled {\n        opacity: 0.7; }\n    #_landing form .field-err {\n      color: firebrick;\n      margin: -15px 0 15px 30px;\n      font-size: 14px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form .err-msg {\n      color: firebrick;\n      font-size: 14px;\n      margin: 40px 0 0 30px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form .updated {\n      color: #77dd77;\n      text-align: center;\n      margin: 10px 0 0;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n  #_landing .no-acct {\n    margin: 15px 0 0 30px;\n    color: firebrick;\n    animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n", ""]);
 
 // exports
 
@@ -66254,9 +66254,10 @@ if(true) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return updateForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return updateForm; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return saveShopper; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return logout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return login; });
 // actions.js
 
 var updateForm = function updateForm(updates) {
@@ -66283,6 +66284,13 @@ var logout = function logout() {
 		}
 	};
 };
+
+var login = function login() {
+	return {
+		type: 'SHOPPER:LOGIN',
+		payload: {}
+	};
+};
 ;
 
 var _temp = function () {
@@ -66295,6 +66303,8 @@ var _temp = function () {
 	__REACT_HOT_LOADER__.register(saveShopper, 'saveShopper', '/Users/atom/._dev/shoppr/src/actions.js');
 
 	__REACT_HOT_LOADER__.register(logout, 'logout', '/Users/atom/._dev/shoppr/src/actions.js');
+
+	__REACT_HOT_LOADER__.register(login, 'login', '/Users/atom/._dev/shoppr/src/actions.js');
 }();
 
 ;
@@ -66424,16 +66434,13 @@ var _temp = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__("./node_modules/react-router/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__logout__ = __webpack_require__("./src/logout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__constants__ = __webpack_require__("./src/constants.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions__ = __webpack_require__("./src/actions.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__styles_scss__ = __webpack_require__("./src/styles.scss");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__styles_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__field__ = __webpack_require__("./src/field.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__logout__ = __webpack_require__("./src/logout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants__ = __webpack_require__("./src/constants.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions__ = __webpack_require__("./src/actions.js");
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -66442,7 +66449,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // apply.js
-
 
 
 
@@ -66508,8 +66514,8 @@ var Apply = function (_Component) {
 					null,
 					'We need some information before moving on...'
 				),
-				__WEBPACK_IMPORTED_MODULE_4__constants__["b" /* FIELDS */].map(function (f) {
-					return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Field, _extends({ key: f.name, field: f }, _this2.props));
+				__WEBPACK_IMPORTED_MODULE_5__constants__["b" /* FIELDS */].map(function (f) {
+					return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__field__["a" /* default */], _extends({ key: f.name, field: f }, _this2.props));
 				}),
 				invalid && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 					'div',
@@ -66523,7 +66529,11 @@ var Apply = function (_Component) {
 						className: 'submit' },
 					activeUserSet ? 'Update' : 'Submit'
 				),
-				activeUserSet && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__logout__["a" /* default */], null),
+				activeUserSet ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__logout__["a" /* default */], null) : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_2_react_router__["Link"],
+					{ to: '/login', className: 'logout' },
+					'Already applied?'
+				),
 				activeUserSet && updated && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 					'div',
 					{ className: 'updated' },
@@ -66534,91 +66544,6 @@ var Apply = function (_Component) {
 	}]);
 
 	return Apply;
-}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
-
-var Field = function (_Component2) {
-	_inherits(Field, _Component2);
-
-	function Field(props) {
-		_classCallCheck(this, Field);
-
-		var _this3 = _possibleConstructorReturn(this, (Field.__proto__ || Object.getPrototypeOf(Field)).call(this, props));
-
-		_this3._update = _this3._update.bind(_this3);
-		_this3._validate = _this3._validate.bind(_this3);
-		return _this3;
-	}
-
-	_createClass(Field, [{
-		key: '_update',
-		value: function _update(e) {
-			var name = e.target.getAttribute('name'),
-			    val = e.target.value;
-
-			this._validate(name, val);
-		}
-	}, {
-		key: '_validate',
-		value: function _validate(name, val) {
-			var _updateForm;
-
-			var dispatch = this.props.dispatch,
-			    valid = false;
-
-
-			switch (name) {
-
-				case 'fname':
-				case 'lname':
-					if (/^[A-Za-z -]+$/.test(val)) valid = true;
-					break;
-
-				case 'email':
-					if (/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(val)) valid = true;
-					break;
-
-				case 'phone':
-					if (/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(val)) valid = true;
-					break;
-
-				case 'zip':
-					if (/^[0-9\- ]+$/.test(val)) valid = true;
-					break;
-
-			}
-
-			dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__actions__["c" /* updateForm */])((_updateForm = {}, _defineProperty(_updateForm, name, val), _defineProperty(_updateForm, name + '_valid', valid), _updateForm)));
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			var _props = this.props,
-			    shopper = _props.shopper,
-			    field = _props.field;
-
-
-			return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-				'div',
-				null,
-				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('input', {
-					id: field.name,
-					type: field.type,
-					name: field.name,
-					className: !shopper[field.name + '_valid'] ? 'err' : '',
-					value: shopper[field.name] || '',
-					placeholder: field.placeholder,
-					onChange: this._update,
-					onFocus: this._update }),
-				!shopper[field.name + '_valid'] && _.isBoolean(shopper[field.name + '_valid']) && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-					'div',
-					{ className: 'field-err' },
-					field.err
-				)
-			);
-		}
-	}]);
-
-	return Field;
 }(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state, props) {
@@ -66638,8 +66563,6 @@ var _temp = function () {
 	}
 
 	__REACT_HOT_LOADER__.register(Apply, 'Apply', '/Users/atom/._dev/shoppr/src/apply.js');
-
-	__REACT_HOT_LOADER__.register(Field, 'Field', '/Users/atom/._dev/shoppr/src/apply.js');
 
 	__REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/atom/._dev/shoppr/src/apply.js');
 
@@ -66765,7 +66688,7 @@ var _temp = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AGREEMENT; });
 // constants.js
 
-var FIELDS = [{ name: 'fname', placeholder: 'First Name', type: 'text', err: 'Invalid first name. Ex: John' }, { name: 'lname', placeholder: 'Last Name', type: 'text', err: 'Invalid first name. Ex: Doe' }, { name: 'email', placeholder: 'Email Address', type: 'email', err: 'Invalid email. Ex: someone@example.com' }, { name: 'phone', placeholder: 'Phone Number', type: 'tel', err: 'Invalid phone number. Ex: 123-123-1234' }, { name: 'zip', placeholder: 'Zip Code', type: 'text', err: 'Invalid zip code. Ex: 12345' }];
+var FIELDS = [{ name: 'fname', placeholder: 'First Name', type: 'text', err: 'Invalid first name. Ex: John' }, { name: 'lname', placeholder: 'Last Name', type: 'text', err: 'Invalid first name. Ex: Doe' }, { name: 'email', placeholder: 'Email Address', type: 'email', err: 'Invalid email. Ex: someone@example.com', login: true }, { name: 'phone', placeholder: 'Phone Number', type: 'tel', err: 'Invalid phone number. Ex: 123-123-1234', login: true }, { name: 'zip', placeholder: 'Zip Code', type: 'text', err: 'Invalid zip code. Ex: 12345' }];
 
 var AGREEMENT = [{ id: 1, label: 'I hereby authorize Instacart to investigate my background and qualifications for purposes of evaluating whether I am qualified for the position for which I am applying.' }, { id: 2, label: 'I understand that Instacart will utilize an outside firm or firms to assist it in checking such information, and I specifically authorize such an investigation by information services and outside entities of the company\'s choice.' }, { id: 3, label: 'I also understand that I may withhold my permission and that in such a case, no investigation will be done, and my application for employment will not be processed further.' }];
 ;
@@ -66778,6 +66701,132 @@ var _temp = function () {
 	__REACT_HOT_LOADER__.register(FIELDS, 'FIELDS', '/Users/atom/._dev/shoppr/src/constants.js');
 
 	__REACT_HOT_LOADER__.register(AGREEMENT, 'AGREEMENT', '/Users/atom/._dev/shoppr/src/constants.js');
+}();
+
+;
+
+/***/ }),
+
+/***/ "./src/field.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions__ = __webpack_require__("./src/actions.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// apply.js
+
+
+
+
+
+var Field = function (_Component) {
+	_inherits(Field, _Component);
+
+	function Field(props) {
+		_classCallCheck(this, Field);
+
+		var _this = _possibleConstructorReturn(this, (Field.__proto__ || Object.getPrototypeOf(Field)).call(this, props));
+
+		_this._update = _this._update.bind(_this);
+		_this._validate = _this._validate.bind(_this);
+		return _this;
+	}
+
+	_createClass(Field, [{
+		key: '_update',
+		value: function _update(e) {
+			var name = e.target.getAttribute('name'),
+			    val = e.target.value;
+
+			this._validate(name, val);
+		}
+	}, {
+		key: '_validate',
+		value: function _validate(name, val) {
+			var _updateForm;
+
+			var dispatch = this.props.dispatch,
+			    valid = false;
+
+
+			switch (name) {
+
+				case 'fname':
+				case 'lname':
+					if (/^[A-Za-z -]+$/.test(val)) valid = true;
+					break;
+
+				case 'email':
+					if (/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(val)) valid = true;
+					break;
+
+				case 'phone':
+					if (/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(val)) valid = true;
+					break;
+
+				case 'zip':
+					if (/^[0-9\- ]+$/.test(val)) valid = true;
+					break;
+
+			}
+
+			dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__actions__["d" /* updateForm */])((_updateForm = {}, _defineProperty(_updateForm, name, val), _defineProperty(_updateForm, name + '_valid', valid), _updateForm)));
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _props = this.props,
+			    shopper = _props.shopper,
+			    field = _props.field;
+
+
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				null,
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+					id: field.name,
+					type: field.type,
+					name: field.name,
+					className: !shopper[field.name + '_valid'] ? 'err' : '',
+					value: shopper[field.name] || '',
+					placeholder: field.placeholder,
+					onChange: this._update,
+					onFocus: this._update }),
+				!shopper[field.name + '_valid'] && _.isBoolean(shopper[field.name + '_valid']) && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'field-err' },
+					field.err
+				)
+			);
+		}
+	}]);
+
+	return Field;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+var _default = Field;
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+	if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+		return;
+	}
+
+	__REACT_HOT_LOADER__.register(Field, 'Field', '/Users/atom/._dev/shoppr/src/field.js');
+
+	__REACT_HOT_LOADER__.register(_default, 'default', '/Users/atom/._dev/shoppr/src/field.js');
 }();
 
 ;
@@ -66799,9 +66848,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_router__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store_js__ = __webpack_require__("./src/store.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__apply_js__ = __webpack_require__("./src/apply.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__landing_js__ = __webpack_require__("./src/landing.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__agreement_js__ = __webpack_require__("./src/agreement.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__confirmation_js__ = __webpack_require__("./src/confirmation.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_js__ = __webpack_require__("./src/login.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__landing_js__ = __webpack_require__("./src/landing.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__agreement_js__ = __webpack_require__("./src/agreement.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__confirmation_js__ = __webpack_require__("./src/confirmation.js");
 // /shopper/src/index.js
 
 
@@ -66816,6 +66866,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 	__WEBPACK_IMPORTED_MODULE_2_react_redux__["Provider"],
 	{ store: __WEBPACK_IMPORTED_MODULE_4__store_js__["a" /* default */] },
@@ -66824,10 +66875,11 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPA
 		{ history: __WEBPACK_IMPORTED_MODULE_3_react_router__["hashHistory"] },
 		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 			__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"],
-			{ path: '/', component: __WEBPACK_IMPORTED_MODULE_6__landing_js__["a" /* default */] },
+			{ path: '/', component: __WEBPACK_IMPORTED_MODULE_7__landing_js__["a" /* default */] },
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/apply', component: __WEBPACK_IMPORTED_MODULE_5__apply_js__["a" /* default */] }),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/agreement', component: __WEBPACK_IMPORTED_MODULE_7__agreement_js__["a" /* default */] }),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/confirmation', component: __WEBPACK_IMPORTED_MODULE_8__confirmation_js__["a" /* default */] })
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/login', component: __WEBPACK_IMPORTED_MODULE_6__login_js__["a" /* default */] }),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/agreement', component: __WEBPACK_IMPORTED_MODULE_8__agreement_js__["a" /* default */] }),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/confirmation', component: __WEBPACK_IMPORTED_MODULE_9__confirmation_js__["a" /* default */] })
 		)
 	)
 ), document.getElementById('_Shopper'));
@@ -66922,6 +66974,141 @@ var _temp = function () {
 	__REACT_HOT_LOADER__.register(LandingPage, 'LandingPage', '/Users/atom/._dev/shoppr/src/landing.js');
 
 	__REACT_HOT_LOADER__.register(_default, 'default', '/Users/atom/._dev/shoppr/src/landing.js');
+}();
+
+;
+
+/***/ }),
+
+/***/ "./src/login.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__("./node_modules/react-redux/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__("./node_modules/react-router/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__field__ = __webpack_require__("./src/field.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions__ = __webpack_require__("./src/actions.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants__ = __webpack_require__("./src/constants.js");
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// login.js
+
+
+
+
+
+
+
+
+
+var LOGIN_FIELDS = _.filter(__WEBPACK_IMPORTED_MODULE_5__constants__["b" /* FIELDS */], function (f) {
+	return !!f.login;
+});
+
+var Login = function (_Component) {
+	_inherits(Login, _Component);
+
+	function Login(props) {
+		_classCallCheck(this, Login);
+
+		var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+
+		_this.state = {};
+		_this._login = _this._login.bind(_this);
+		return _this;
+	}
+
+	_createClass(Login, [{
+		key: '_login',
+		value: function _login(e) {
+			e.preventDefault();
+
+			var _props = this.props,
+			    dispatch = _props.dispatch,
+			    shopper = _props.shopper;
+
+			if (shopper.login_form_valid) dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__actions__["c" /* login */])());
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _this2 = this;
+
+			var shopper = this.props.shopper,
+			    login_filled = shopper.email && shopper.phone,
+			    invalidLogin = shopper.login_failed && _.isBoolean(shopper.login_failed);
+
+
+			return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+				'form',
+				{ id: '_apply', onSubmit: this._login, className: 'container' },
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+					'h5',
+					null,
+					'Login to view your existing application'
+				),
+				LOGIN_FIELDS.map(function (l) {
+					return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__field__["a" /* default */], _extends({ key: l.name, field: l }, _this2.props));
+				}),
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+					'button',
+					{
+						disabled: !login_filled,
+						className: 'submit' },
+					'Login'
+				),
+				invalidLogin && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+					'div',
+					{ className: 'no-acct' },
+					'No existing account with these credentials.'
+				),
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_2_react_router__["Link"],
+					{ to: '/apply', className: 'logout' },
+					'Don\'t have an account?'
+				)
+			);
+		}
+	}]);
+
+	return Login;
+}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
+
+var mapStateToProps = function mapStateToProps(state, props) {
+	return {
+		shopper: state.shopper
+	};
+};
+
+var _default = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react_redux__["connect"])(mapStateToProps)(Login);
+
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+	if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+		return;
+	}
+
+	__REACT_HOT_LOADER__.register(LOGIN_FIELDS, 'LOGIN_FIELDS', '/Users/atom/._dev/shoppr/src/login.js');
+
+	__REACT_HOT_LOADER__.register(Login, 'Login', '/Users/atom/._dev/shoppr/src/login.js');
+
+	__REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/atom/._dev/shoppr/src/login.js');
+
+	__REACT_HOT_LOADER__.register(_default, 'default', '/Users/atom/._dev/shoppr/src/login.js');
 }();
 
 ;
@@ -67048,7 +67235,6 @@ var _get = function _get(key) {
 var init = {
     users: _get('users') || []
 };
-console.log('here8');
 
 var _default = function _default() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : init;
@@ -67071,6 +67257,7 @@ var _default = function _default() {
             });
 
             newState.form_valid = all_valid;
+            newState.login_form_valid = !!(newState.email && newState.phone);
 
             return newState;
 
@@ -67097,6 +67284,21 @@ var _default = function _default() {
             });
 
             newState.activeUser = {};
+
+            return newState;
+
+        case 'SHOPPER:LOGIN':
+            var newState = _extends({}, state),
+                email = state.email || '',
+                phone = state.phone || '';
+
+            var found = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.find(state.users.slice(), { email: email, phone: phone });
+            console.log('foudn: ', found);
+
+            if (found) {
+                newState.activeUser = _extends({}, found);
+                newState.login_failed = false;
+            } else newState.login_failed = !found;
 
             return newState;
 

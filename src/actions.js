@@ -24,3 +24,10 @@ export const logout = () => {
 		}
 	}
 }
+
+export const login = () => {
+	return {
+		type: 'SHOPPER:LOGIN',
+		payload: {}
+	}
+}

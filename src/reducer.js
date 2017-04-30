@@ -15,7 +15,6 @@ const _get = key => {
 let init = {
 	users: _get('users') || [],
 };
-console.log('here8');
 
 export default function(state = init, action) {
 
@@ -35,6 +34,7 @@ export default function(state = init, action) {
 			});
 
 			newState.form_valid = all_valid;
+			newState.login_form_valid = !!(newState.email && newState.phone);
 
     		return newState;
 
@@ -57,6 +57,22 @@ export default function(state = init, action) {
     		_.each(FIELDS, f => newState[f.name] = '' );
 
     		newState.activeUser = {};
+
+    		return newState;
+
+    	case 'SHOPPER:LOGIN':
+    		var newState = {...state},
+    			email = state.email || '',
+    			phone = state.phone || '';
+
+    		var found = _.find(state.users.slice(), {email, phone});
+    		console.log('foudn: ', found);
+
+    		if( found ){
+    			newState.activeUser = {...found};
+    			newState.login_failed = false;
+
+    		}else newState.login_failed = !found; 
 
     		return newState;
 

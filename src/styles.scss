@@ -118,7 +118,7 @@ body{
 
 	.logout{ margin: 10px 0 0; }
 
-	form#_apply{
+	form{
 		max-width: 365px;
 	    margin: auto;
 	    border-radius: 3px;
@@ -184,6 +184,13 @@ body{
 	    	color: $green;
 	    	text-align: center;
 	    	margin: 10px 0 0;
+	    	@include fadeInLeft(0.5s);
 	    }
+	}
+
+	.no-acct{
+		margin: 15px 0 0 30px;
+		color: $err;
+	    @include fadeInLeft(0.5s);
 	}
 }
