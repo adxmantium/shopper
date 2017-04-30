@@ -1,12 +1,13 @@
 // agreement.js
 
+import { connect } from 'react-redux'
 import React, { Component } from 'react'
 import { Link, hashHistory } from 'react-router'
 
 import { AGREEMENT } from './constants'
 import { saveShopper } from './actions'
 
-export default class Agreement extends Component{
+class Agreement extends Component{
 	constructor(props){
 		super(props);
 		this.state = {};
@@ -15,6 +16,7 @@ export default class Agreement extends Component{
 
 	_saveShopper(){
 		let { dispatch } = this.props;
+		
 		dispatch( saveShopper() );
 		hashHistory.push('/confirmation');
 	}
@@ -30,3 +32,11 @@ export default class Agreement extends Component{
 		);
 	}
 }
+
+const mapStateToProps = (state, props) => {
+	return {
+		shopper: state.shopper,
+	};
+};
+
+export default connect(mapStateToProps)(Agreement);

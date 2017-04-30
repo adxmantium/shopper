@@ -30,12 +30,19 @@ export default function(state = init, action) {
     		var newState = {...state, save_done: true},
     			newUser = {};
 
-    		_.each(FIELDS, f => {
-    			newUser[f.name] = newState[f.name];
-    		});
+    		_.each(FIELDS, f => newUser[f.name] = newState[f.name] );
 
     		//save to sessionStorage
     		newState.activeUser = newUser;
+
+    		return newState;
+
+    	case 'SHOPPER:LOGOUT':
+    		var newState = {...state, save_done: false};
+
+    		_.each(FIELDS, f => newState[f.name] = '' );
+
+    		newState.activeUser = {};
 
     		return newState;
 
