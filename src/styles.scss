@@ -60,7 +60,7 @@ body{
 }
 
 #_landing{
-	padding: 40px 0 0;	
+	padding: 40px 0;	
 
 	h2{ 
 		color: #aaa;
@@ -246,4 +246,14 @@ body{
 		color: $err;
 	    @include fadeInLeft(0.5s);
 	}
+}
+
+// small only
+@media only screen and (max-width: 40em) {
+	#_landing{
+		.container{
+			max-width: 365px;
+			padding: 40px 10px;
+		}
+	}	
 }
