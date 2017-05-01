@@ -18,9 +18,15 @@ export default class LandingPage extends Component{
 			<div id="_landing">
 
 				{ children || 
-					<div className="container">
-						<h1>Become an Instacart Shopper!</h1>
-						<Link to="/apply" className="apply">Apply Now ></Link>
+					<div className="container landing">
+						<div className="carrot" />
+						<div className="promo">
+							<div>Are you <span>independent</span>?</div>
+							<div>Like having <span>fun</span>?</div>
+							<div>Wanna earn some <span>extra income</span>?</div>
+						</div>
+						<h2>Become an <span>Instacart Shopper</span>!</h2>
+						<Link to="/apply" className="apply">Apply Now</Link>
 					</div>
 				}
 

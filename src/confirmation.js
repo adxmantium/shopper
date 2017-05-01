@@ -24,6 +24,7 @@ class Confirmation extends Component{
 	render(){
 		return(
 			<div className="container confirmation">
+				<div className="carrot sm" />
 
 				<h3>Your Application has been successfully submitted!</h3>
 				<div>Your application has been received and is currently being reviewed. We will get back to you as soon as possible. In the meantime, you can view your current application and/or edit it.</div>

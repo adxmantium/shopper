@@ -45,6 +45,8 @@ class Apply extends Component{
 
 		return(
 			<form id="_apply" onSubmit={ this._apply } className="container">
+				<div className="carrot sm" />
+
 				{ activeUserSet ? 
 					<h5>Update your information</h5>
 					: <h5>We need some information before moving on...</h5>

@@ -24,7 +24,9 @@ class Agreement extends Component{
 	render(){
 		return(
 			<div className="container agreement">
-				<h4>Terms of Service</h4>
+				<div className="carrot sm" />
+
+				<h4>Terms of Agreement</h4>
 				
 				{ AGREEMENT.map(a => <div key={a.id}>{a.label}</div>) }
 

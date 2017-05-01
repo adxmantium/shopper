@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "93245f5b94a1e9c1c2e5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "05a584270f0e1322133c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -2845,7 +2845,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #eee;\n  font-family: \"Open Sans\", sans-serif;\n  padding: 0;\n  margin: 0; }\n\n#_landing {\n  padding: 40px 0 0; }\n  #_landing h1 {\n    text-align: center; }\n  #_landing .container {\n    animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n  #_landing .apply {\n    display: block;\n    width: 200px;\n    padding: 10px 0;\n    margin: auto;\n    text-align: center;\n    color: #fff;\n    background-color: #f7a700;\n    cursor: pointer;\n    text-decoration: none;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .apply:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .agreement, #_landing .confirmation {\n    background-color: #fff;\n    max-width: 500px;\n    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);\n    margin: auto;\n    padding: 20px;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px; }\n    #_landing .agreement > div, #_landing .confirmation > div {\n      margin: 0 0 20px; }\n  #_landing .confirmation h3 {\n    color: #77dd77;\n    text-align: center; }\n  #_landing .agree {\n    display: block;\n    color: #fff;\n    background-color: #77dd77;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    text-align: center;\n    padding: 10px 0;\n    font-size: 24px;\n    cursor: pointer;\n    text-decoration: none;\n    margin: 0 0 20px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .agree:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .disagree, #_landing .logout {\n    display: block;\n    text-align: center;\n    color: #779ecb;\n    text-decoration: none;\n    font-size: 14px;\n    cursor: pointer; }\n  #_landing .logout {\n    margin: 10px 0 0; }\n  #_landing form {\n    max-width: 365px;\n    margin: auto;\n    border-radius: 3px;\n    padding: 20px 20px 50px;\n    background: #fff;\n    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3); }\n    #_landing form h5 {\n      text-align: center; }\n    #_landing form input {\n      border-width: 1px;\n      border-style: solid;\n      border-color: #aaa;\n      width: 80%;\n      display: block;\n      margin: 0 auto 15px;\n      font-size: 18px;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      padding: 15px 5px;\n      color: #797979;\n      outline-color: #77dd77;\n      outline-width: 4px; }\n      #_landing form input.err {\n        outline-color: firebrick; }\n      #_landing form input::placeholder {\n        color: #ddd; }\n    #_landing form .submit {\n      width: 83.5%;\n      margin: auto;\n      background-color: #77dd77;\n      color: #fff;\n      padding: 15px 0;\n      text-align: center;\n      cursor: pointer;\n      display: block;\n      font-size: 18px;\n      border-style: none;\n      outline-color: #77dd77;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      -webkit-user-select: none;\n      -moz-user-select: none;\n      -ms-user-select: none;\n      user-select: none; }\n      #_landing form .submit:active {\n        box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n      #_landing form .submit:disabled {\n        opacity: 0.7; }\n    #_landing form .field-err {\n      color: firebrick;\n      margin: -15px 0 15px 30px;\n      font-size: 14px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form .err-msg {\n      color: firebrick;\n      font-size: 14px;\n      margin: 40px 0 0 30px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form .updated {\n      color: #77dd77;\n      text-align: center;\n      margin: 10px 0 0;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n  #_landing .no-acct {\n    margin: 15px 0 0 30px;\n    color: firebrick;\n    animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n", ""]);
+exports.push([module.i, "body {\n  background-color: #eee;\n  font-family: \"Open Sans\", sans-serif;\n  padding: 0;\n  margin: 0;\n  background-image: url(https://charlotteagenda-charlotteagenda.netdna-ssl.com/wp-content/uploads/2016/05/instacart-header.jpg);\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n  background-size: cover; }\n\n.layer {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background: rgba(0, 0, 0, 0.6);\n  z-index: -1; }\n\n#_landing {\n  padding: 40px 0 0; }\n  #_landing h2 {\n    color: #aaa;\n    width: 75%;\n    margin: 20px auto; }\n    #_landing h2 span {\n      color: #77dd77; }\n  #_landing .container {\n    animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n  #_landing .landing {\n    background-color: #fff;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    width: 500px;\n    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);\n    margin: auto;\n    padding: 50px 20px 70px; }\n    #_landing .landing .promo {\n      width: 75%;\n      margin: auto;\n      color: #aaa;\n      font-size: 24px; }\n      #_landing .landing .promo > div:not(:last-child) {\n        margin: 0 0 5px; }\n      #_landing .landing .promo span {\n        color: #77dd77; }\n  #_landing .carrot {\n    width: 100px;\n    height: 100px;\n    background-image: url(https://www.instacart.com/carrotlogo.png);\n    background-repeat: no-repeat;\n    background-size: cover;\n    margin: auto auto 30px; }\n    #_landing .carrot.sm {\n      width: 50px;\n      height: 50px;\n      margin: auto auto 10px; }\n  #_landing .apply {\n    display: block;\n    width: 75%;\n    padding: 10px 0;\n    font-size: 30px;\n    margin: 30px auto 0;\n    text-align: center;\n    color: #fff;\n    background-color: #f7a700;\n    cursor: pointer;\n    text-decoration: none;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .apply:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .agreement, #_landing .confirmation {\n    background-color: #fff;\n    max-width: 500px;\n    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);\n    margin: auto;\n    padding: 20px;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px; }\n    #_landing .agreement > div, #_landing .confirmation > div {\n      margin: 0 0 20px; }\n  #_landing .agreement h4 {\n    text-align: center; }\n  #_landing .confirmation h3 {\n    color: #77dd77;\n    text-align: center; }\n  #_landing .agree {\n    display: block;\n    color: #fff;\n    background-color: #77dd77;\n    -webkit-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -ms-border-radius: 3px;\n    border-radius: 3px;\n    text-align: center;\n    padding: 10px 0;\n    font-size: 24px;\n    cursor: pointer;\n    text-decoration: none;\n    margin: 0 0 20px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #_landing .agree:active {\n      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n  #_landing .disagree, #_landing .logout {\n    display: block;\n    text-align: center;\n    color: #779ecb;\n    text-decoration: none;\n    font-size: 14px;\n    cursor: pointer; }\n  #_landing .logout {\n    margin: 10px 0 0; }\n  #_landing form {\n    max-width: 365px;\n    margin: auto;\n    border-radius: 3px;\n    padding: 20px 20px 50px;\n    background: #fff;\n    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3); }\n    #_landing form h5 {\n      text-align: center; }\n    #_landing form input {\n      border-width: 1px;\n      border-style: solid;\n      border-color: #aaa;\n      width: 80%;\n      display: block;\n      margin: 0 auto 15px;\n      font-size: 18px;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      padding: 15px 5px;\n      color: #797979;\n      outline-color: #77dd77;\n      outline-width: 4px; }\n      #_landing form input.err {\n        outline-color: firebrick; }\n      #_landing form input::placeholder {\n        color: #ddd; }\n    #_landing form .submit {\n      width: 83.5%;\n      margin: auto;\n      background-color: #77dd77;\n      color: #fff;\n      padding: 15px 0;\n      text-align: center;\n      cursor: pointer;\n      display: block;\n      font-size: 18px;\n      border-style: none;\n      outline-color: #77dd77;\n      -webkit-border-radius: 3px;\n      -moz-border-radius: 3px;\n      -ms-border-radius: 3px;\n      border-radius: 3px;\n      -webkit-user-select: none;\n      -moz-user-select: none;\n      -ms-user-select: none;\n      user-select: none; }\n      #_landing form .submit:active {\n        box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }\n      #_landing form .submit:disabled {\n        opacity: 0.7; }\n    #_landing form .field-err {\n      color: firebrick;\n      margin: -15px 0 15px 30px;\n      font-size: 14px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form .err-msg {\n      color: firebrick;\n      font-size: 14px;\n      margin: 40px 0 0 30px;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n    #_landing form .updated {\n      color: #77dd77;\n      text-align: center;\n      margin: 10px 0 0;\n      animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n  #_landing .no-acct {\n    margin: 15px 0 0 30px;\n    color: firebrick;\n    animation: _fadeInRight 0.5s; }\n\n@keyframes _fadeInRight {\n  0% {\n    opacity: 0;\n    transform: translate3d(100%, 0, 0); }\n  100% {\n    opacity: 1;\n    transform: none; } }\n", ""]);
 
 // exports
 
@@ -66378,10 +66378,11 @@ var Agreement = function (_Component) {
 			return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 				'div',
 				{ className: 'container agreement' },
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('div', { className: 'carrot sm' }),
 				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 					'h4',
 					null,
-					'Terms of Service'
+					'Terms of Agreement'
 				),
 				__WEBPACK_IMPORTED_MODULE_3__constants__["a" /* AGREEMENT */].map(function (a) {
 					return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
@@ -66520,6 +66521,7 @@ var Apply = function (_Component) {
 			return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 				'form',
 				{ id: '_apply', onSubmit: this._apply, className: 'container' },
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('div', { className: 'carrot sm' }),
 				activeUserSet ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 					'h5',
 					null,
@@ -66645,6 +66647,7 @@ var Confirmation = function (_Component) {
 			return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 				'div',
 				{ className: 'container confirmation' },
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('div', { className: 'carrot sm' }),
 				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 					'h3',
 					null,
@@ -66971,16 +66974,60 @@ var LandingPage = function (_Component) {
 				{ id: '_landing' },
 				children || __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ className: 'container' },
+					{ className: 'container landing' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'carrot' }),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'h1',
+						'div',
+						{ className: 'promo' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							null,
+							'Are you ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'span',
+								null,
+								'independent'
+							),
+							'?'
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							null,
+							'Like having ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'span',
+								null,
+								'fun'
+							),
+							'?'
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							null,
+							'Wanna earn some ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'span',
+								null,
+								'extra income'
+							),
+							'?'
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'h2',
 						null,
-						'Become an Instacart Shopper!'
+						'Become an ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'span',
+							null,
+							'Instacart Shopper'
+						),
+						'!'
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						__WEBPACK_IMPORTED_MODULE_1_react_router__["Link"],
 						{ to: '/apply', className: 'apply' },
-						'Apply Now >'
+						'Apply Now'
 					)
 				)
 			);
@@ -67093,6 +67140,7 @@ var Login = function (_Component) {
 			return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 				'form',
 				{ id: '_apply', onSubmit: this._login, className: 'container' },
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('div', { className: 'carrot sm' }),
 				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
 					'h5',
 					null,
