@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6a95d3ba49f92db14dfa"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fa5c588f3b1567e8ca73"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -67189,8 +67189,6 @@ var Login = function (_Component) {
 	_createClass(Login, [{
 		key: 'componentWillReceiveProps',
 		value: function componentWillReceiveProps(np) {
-			console.log('taking break - 1');
-
 			var s = this.props.shopper,
 			    ns = np.shopper;
 
@@ -67484,7 +67482,6 @@ var _default = function _default() {
                 phone = state.phone || '';
 
             var found = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.find(state.users.slice(), { email: email, phone: phone });
-            console.log('foudn: ', found);
 
             if (found) {
                 newState.activeUser = _extends({}, found);

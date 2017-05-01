@@ -18,8 +18,6 @@ class Login extends Component{
 	}
 
 	componentWillReceiveProps(np){
-		console.log('taking break - 1');
-
 		let { shopper: s } = this.props,
 			{ shopper: ns} = np;
 

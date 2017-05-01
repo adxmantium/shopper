@@ -89,7 +89,6 @@ export default function(state = init, action) {
     			phone = state.phone || '';
 
     		var found = _.find(state.users.slice(), {email, phone});
-    		console.log('foudn: ', found);
 
     		if( found ){
     			newState.activeUser = {...found};
