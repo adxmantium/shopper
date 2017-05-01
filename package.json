@@ -6,6 +6,7 @@
     "name": "Adam Adams"
   },
   "scripts": {
+    "start": "node server.js"
     "dev": "webpack-dashboard -- webpack-dev-server",
     "prod": "webpack -p"
   },
