@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "83a9ee08f15ce6eb9e80"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6a95d3ba49f92db14dfa"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -66435,6 +66435,84 @@ var _temp = function () {
 
 /***/ }),
 
+/***/ "./src/analytics.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__("./node_modules/react-redux/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__("./src/actions.js");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// analytics.js
+
+
+
+
+
+
+var Analytics = function (_Component) {
+	_inherits(Analytics, _Component);
+
+	function Analytics(props) {
+		_classCallCheck(this, Analytics);
+
+		var _this = _possibleConstructorReturn(this, (Analytics.__proto__ || Object.getPrototypeOf(Analytics)).call(this, props));
+
+		_this.state = {};
+		return _this;
+	}
+
+	_createClass(Analytics, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+				'div',
+				{ className: 'container agreement' },
+				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('div', { className: 'carrot sm' }),
+				'Analytics'
+			);
+		}
+	}]);
+
+	return Analytics;
+}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
+
+var mapStateToProps = function mapStateToProps(state, props) {
+	return {
+		shopper: state.shopper
+	};
+};
+
+var _default = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_react_redux__["connect"])(mapStateToProps)(Analytics);
+
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+var _temp = function () {
+	if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+		return;
+	}
+
+	__REACT_HOT_LOADER__.register(Analytics, 'Analytics', '/Users/atom/._dev/shoppr/src/analytics.js');
+
+	__REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/atom/._dev/shoppr/src/analytics.js');
+
+	__REACT_HOT_LOADER__.register(_default, 'default', '/Users/atom/._dev/shoppr/src/analytics.js');
+}();
+
+;
+
+/***/ }),
+
 /***/ "./src/apply.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66882,7 +66960,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_js__ = __webpack_require__("./src/login.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__landing_js__ = __webpack_require__("./src/landing.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__agreement_js__ = __webpack_require__("./src/agreement.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__confirmation_js__ = __webpack_require__("./src/confirmation.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__analytics_js__ = __webpack_require__("./src/analytics.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__confirmation_js__ = __webpack_require__("./src/confirmation.js");
 // /shopper/src/index.js
 
 
@@ -66891,6 +66970,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 //store
+
 
 
 
@@ -66910,7 +66990,8 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPA
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/apply', component: __WEBPACK_IMPORTED_MODULE_5__apply_js__["a" /* default */] }),
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/login', component: __WEBPACK_IMPORTED_MODULE_6__login_js__["a" /* default */] }),
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/agreement', component: __WEBPACK_IMPORTED_MODULE_8__agreement_js__["a" /* default */] }),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/confirmation', component: __WEBPACK_IMPORTED_MODULE_9__confirmation_js__["a" /* default */] })
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/confirmation', component: __WEBPACK_IMPORTED_MODULE_10__confirmation_js__["a" /* default */] }),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router__["Route"], { path: '/analytics', component: __WEBPACK_IMPORTED_MODULE_9__analytics_js__["a" /* default */] })
 		)
 	)
 ), document.getElementById('_Shopper'));

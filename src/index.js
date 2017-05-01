@@ -11,6 +11,7 @@ import Apply from './apply.js'
 import Login from './login.js'
 import LandingPage from './landing.js'
 import Agreement from './agreement.js'
+import Analytics from './analytics.js'
 import Confirmation from './confirmation.js'
 
 render((
@@ -22,6 +23,7 @@ render((
 				<Route path="/login" component={ Login } />
 				<Route path="/agreement" component={ Agreement } />
 				<Route path="/confirmation" component={ Confirmation } />
+				<Route path="/analytics" component={ Analytics } />
 			</Route>
 	    </Router>
     </Provider>
