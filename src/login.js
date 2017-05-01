@@ -18,7 +18,7 @@ class Login extends Component{
 	}
 
 	componentWillReceiveProps(np){
-		console.log('taking break');
+		console.log('taking break - 1');
 
 		let { shopper: s } = this.props,
 			{ shopper: ns} = np;
@@ -41,7 +41,7 @@ class Login extends Component{
 		return (
 			<form id="_apply" onSubmit={ this._login } className="container">
 				<div className="carrot sm" />
-				
+
 				<h5>Login to view your existing application</h5>
 
 				{ LOGIN_FIELDS.map(l => <Field key={l.name} field={l} {...this.props} />) }
